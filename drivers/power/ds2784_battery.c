@@ -981,13 +981,13 @@ if (machine_is_bravoc()) {
 		htc_batt_info.rep.battery_full = 0;
 
 	if (htc_batt_info.rep.battery_full)
-		charge_mode = CHARGE_OFF;
+		charge_mode = CHARGE_SLOW;
 	else if ((htc_batt_info.rep.guage_status_reg & 0x80) &&
 	    (htc_batt_info.rep.batt_current <= 80) &&
 	    (htc_batt_info.rep.level == 100)) {
 	    	if (More_Charge_Extend_Time()) {
 				htc_batt_info.rep.battery_full = 1;
-			charge_mode = CHARGE_OFF;
+			charge_mode = CHARGE_SLOW;
 		}
 	}
 
