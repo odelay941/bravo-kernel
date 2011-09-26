@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -r ZipBuilder/system/lib/modules/*
 make ARCH=arm CROSS_COMPILE=$CCOMPILER modules_install INSTALL_MOD_PATH=ZipBuilder/system
 cd ZipBuilder
 #rm system/lib/modules/*/modules.*
