@@ -142,8 +142,7 @@ static int get_ls_adc_level(uint8_t *data)
 			if (adc_value <=
 				li->ls_config->levels[i]) {
 				adc_level = i;
-				if (li->ls_config->levels[i])
-					break;
+			   	break;
 			}
 		}
 		ILS("ALS value: 0x%X, level: %d #\n",
