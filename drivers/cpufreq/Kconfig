@@ -102,7 +102,7 @@ config CPU_FREQ_DEFAULT_GOV_USERSPACE
 	  to enable the userspace governor manually.
 
 config CPU_FREQ_DEFAULT_GOV_ONDEMANDX
-	bool "ondemandx"
+	bool "ondemandX"
 	select CPU_FREQ_GOV_ONDEMANDX
 	select CPU_FREQ_GOV_PERFORMANCE
 	help
@@ -147,6 +147,7 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVEX
 	  you to get a full dynamic cpu frequency capable system by simply
 	  loading your cpufreq low-level hardware driver, using the
 	  'interactive' governor for latency-sensitive workloads.
+	  Has sleep profile.
 
 endchoice
 
@@ -208,11 +209,11 @@ config CPU_FREQ_GOV_ONDEMANDX
 	select CPU_FREQ_TABLE
 	help
 	  'ondemand' - This driver adds a dynamic cpufreq policy governor.
-	  The governor does a periodic polling and
+	  The governor does a periodic polling and 
 	  changes frequency based on the CPU utilization.
 	  The support for this governor depends on CPU capability to
 	  do fast frequency switching (i.e, very low latency frequency
-	  transitions).
+	  transitions). 
 
 	  To compile this driver as a module, choose M here: the
 	  module will be called cpufreq_ondemand.
